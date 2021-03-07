@@ -1,11 +1,11 @@
 let apiKey = "3ac0d8db34de82819d13a9167239acc1";
 let searchBtn = $(".searchBtn");
-let searchInput = $(".searchInput");
+let searchinput = $(".searchinput");
 
 
-let cityNameEl = $(".cityName");
+let citynameEl = $(".cityname");
 let currentDateEl = $(".currentDate");
-let weatherIconEl = $(".weatherIcon");
+let weathericonEl = $(".weathericon");
 let searchHistoryEl = $(".historyItems");
 
 
@@ -31,12 +31,12 @@ if (JSON.parse(localStorage.getItem("searchHistory")) === null) {
 
 searchBtn.on("click", function(e) {
     e.preventDefault();
-    if (searchInput.val() === "") {
+    if (searchinput.val() === "") {
         alert("You must enter a city");
         return;
     }
     console.log("clicked button")
-    getWeather(searchInput.val());
+    getWeather(searchinput.val());
 });
 
 $(document).on("click", ".historyEntry", function() {
